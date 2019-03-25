@@ -1,0 +1,104 @@
+
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+sort --- sort alphabetically and by indentation. The most indented lines get sorted alphabetically then to the outermost with no indentation gets sorted last.
+  done(data);
+         if (err) throw err;
+        break;
+        break;
+        commandLibrary.cat(userInputArray.slice(1));
+        commandLibrary.head(userInputArray.slice(1));
+        commandLibrary.tail(userInputArray.slice(1));
+        done(bufferText);
+        done(bufferText);
+        if (err) throw err;
+        if(err) throw err;
+        var bufferText = Buffer.from(slicedText, 'utf8');
+        var bufferText=Buffer.from(slicedText, 'utf8');
+        var slicedText= text.split('\n').slice(0,2).join('\n');
+        var slicedText=text.split('\n').slice(-4).join('\n');
+        var text = data.toString('utf8');
+        var text = data.toString('utf8');
+       done(userInput);
+      break;
+      commandLibrary.echo(userInputArray.slice(1).join(" "));
+      process.stdout.write ('non-existent command');
+     //we will add the functionality of echo next within the object commandLibrary
+     const fileName = fullPath[0];
+     fs.readFile(fileName, (err, data) => {
+     process.stdout.write('\nprompt > ');
+     process.stdout.write(output);
+     });
+    case "cat":
+    case "echo":
+    case "head":
+    case "tail":
+    const fileName = fullPath[0];
+    const fileName= fullPath[0];
+    default:
+    fs.readFile(fileName,(err,data)=> {
+    fs.readFile(fileName,(err,data)=>{
+    })
+    })
+   "cat": function(fullPath) {
+   "echo": function(userInput) {
+   "head": function (fullPath){
+   },
+   },
+  "tail": function (fullPath){
+  const command = userInputArray[0];
+  const userInputArray = userInput.split(" ");
+  switch (command) {
+  }
+  }
+  },
+ const commandLibrary = {
+ function done(output) {
+ module.exports.commandLibrary = commandLibrary;
+ module.exports.evaluateCmd = evaluateCmd;
+ }
+//where we will store our commands
+//where we will store the logic of our commands
+//write out data
+const fs = require("fs");
+function evaluateCmd(userInput) {
+}
+};
+
+wc --- prints the total lines of code in the file, the word count and then the byte count of the file. 
+
+72     164    1890 commands.js
+
+
+uniq --- sort each line and return the lines that are different from the one above it, removing duplicate code in consecutive lines. there was no duplicate in this return as it is. 
+
+
+
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+You can connect two commands together so that the output from one program becomes the input of the next program. Two or more commands connected in this way form a pipe.
+
+
+ head -5 commands.js | wc
+       5      11     104
+
+the first 5 lines have 11 word count and 104 byte 
+
+
+6. In this checkpoint, you encountered built-in JavaScript methods as well as the new ES6 syntax. Review the information below before attempting the programming challenge.
+
+
+function reverseString(inputString) {
+  var splitArr= inputString.split('');
+  let arr=[]; 
+  
+  splitArr.forEach((item)=> {
+    arr.push(item);
+  });
+  var reverseArr = arr.reverse();
+
+  var joinedArr = reverseArr.join('') ; 
+  
+  return joinedArr ;
+}
